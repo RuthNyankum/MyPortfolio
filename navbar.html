@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- #111827 -->
+    <!-- NAVBAR -->
+    <nav class="navbar bg-[#0A384A] shadow-lg fixed w-full top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="#" class="text-xl font-bold text-[#67E8F9]">RUTH</a>
+          </div>
+
+          <!-- Hamburger Icon (Visible on Mobile) -->
+          <button id="menuBtn" class="md:hidden focus:outline-none">
+            <svg
+              class="w-8 h-8 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex items-center space-x-8">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Hidden by Default) -->
+      <ul
+        id="mobileMenu"
+        class="hidden absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4 md:hidden"
+      >
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="portfolio.html" class="mobile-nav-link">Portfolio</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
