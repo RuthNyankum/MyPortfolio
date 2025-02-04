@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="bg-[#111827]">
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
+
+    <main id="portfolio" class="max-w-6xl mx-auto py-16">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4 text-[#5cebdf]">My Portfolio</h2>
+        <p class="text-gray-400">
+          Discover my recent projects and creative works
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Apps</button>
+        <button class="filter-btn" data-filter="design">Designs</button>
+        <button class="filter-btn" data-filter="react">React</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="portfolio-item" data-category="web">
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="./assests/images/restaurant.png"
+                alt="Restaurant"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="text-xl font-bold mb-2 text-white">Restaurant</h3>
+
+              <p class="text-gray-400 mb-4">
+                A restaurant website that showcases keto diet meals built with
+                React and Tailwind CSS.
+              </p>
+              <div class="flex gap-2 mb-4">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="flex justify-between">
+                <a href="https://ketohaven.netlify.app/" class="project-link"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/RuthNyankum/Ruthlicious-KetoDiet.git"
+                  class="project-link"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="portfolio-item" data-category="web react">
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="./assests/images/carelink.png"
+                alt="Healthcare Platform"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Healthcare Platform
+              </h3>
+              <p class="text-gray-400 mb-4">
+                A comprehensive healthcare platform that allows patients to book
+                appointments and manage their profile.
+              </p>
+              <div class="flex gap-2 mb-4">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Javascript</span>
+                <!-- <span class="tech-tag">Firebase</span> -->
+              </div>
+              <div class="flex justify-between">
+                <a href="https://carelink.netlify.app/" class="project-link"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/RuthNyankum/CareLink-Frontend.git"
+                  class="project-link"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="portfolio-item" data-category="web react">
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="./assests/images/ite.png"
+                alt="Tech Events"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="text-xl font-bold mb-2 text-white">Tech Events</h3>
+              <p class="text-gray-400 mb-4">
+                A platform to organize and showcase international tech events,
+                providing details and schedules for attendees.
+              </p>
+              <div class="flex gap-2 mb-4">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">JavaScript</span>
+                <!-- <span class="tech-tag">API</span> -->
+              </div>
+              <div class="flex justify-between">
+                <a
+                  href="https://internationaltectevents.netlify.app/"
+                  class="project-link"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/International-Tech-Events/ITE-Frontend.git"
+                  class="project-link"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="portfolio-item" data-category="design">
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="./assests/images/greenvile.png"
+                alt="Real Estate"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Greenvile – Real Estate
+              </h3>
+              <p class="text-gray-400 mb-4">
+                A modern real estate platform designed for seamless property
+                browsing. It features intuitive navigation and a clean,
+                user-friendly interface.
+              </p>
+              <div class="flex gap-2 mb-4">
+                <span class="tech-tag">Figma</span>
+              </div>
+              <div class="flex justify-between">
+                <a
+                  href="https://www.figma.com/design/WovMmqrhudX9DntONdX5A2/Greenvile?node-id=0-1&t=LkKrxXjEE6gGGF88-1"
+                  class="project-link"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="portfolio-item" data-category="design">
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="./assests/images/ecommerce.png"
+                alt="E-commerce"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="text-xl font-bold mb-2 text-white">E-commerce</h3>
+              <p class="text-gray-400 mb-4">
+                A sleek and user-friendly e-commerce platform designed for
+                seamless shopping experiences.
+              </p>
+              <div class="flex gap-2 mb-4">
+                <span class="tech-tag">Figma</span>
+              </div>
+              <div class="flex justify-between">
+                <a
+                  href="https://www.figma.com/design/wURzYBukLKAr6fAr7wRXHD/Ohvaz?node-id=0-1&t=UwqwQeDNI05i6Z2f-1"
+                  class="project-link"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="portfolio-item" data-category="design">
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="./assests/images/photography.png"
+                alt="flyer"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Photography Flyer
+              </h3>
+              <p class="text-gray-400 mb-4">
+                A visually striking photography flyer created in Figma, designed
+                to showcase services with a modern and professional layout.
+              </p>
+              <div class="flex gap-2 mb-4">
+                <span class="tech-tag">Figma</span>
+              </div>
+              <div class="flex justify-between">
+                <a
+                  href="https://www.figma.com/design/Tcu7dzR8ta0WtlkTZSUPYW/photography?t=NcPvgkpIDxOJQBQJ-1"
+                  class="project-link"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="portfolio-item" data-category="web">
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="./assests/images/mindfulness.png"
+                alt="Mindfulness"
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Haven of Mindulness
+              </h3>
+
+              <p class="text-gray-400 mb-4">
+                Haven of Mindfulness is an online platform offering guided
+                meditation, wellness articles, and calming products to help
+                users achieve peace and balance in their lives.
+              </p>
+              <div class="flex gap-2 mb-4">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="flex justify-between">
+                <a
+                  href="https://haven-of-mindfulness.netlify.app/"
+                  class="project-link"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/RuthNyankum/Haven-of-Mindfulness.git"
+                  class="project-link"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

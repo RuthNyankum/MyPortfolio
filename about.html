@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
+    <main class="max-w-6xl mx-auto py-16 px-6">
+      <!-- ABOUT SECTION  -->
+      <h1 class="text-4xl font-bold text-center text-[#0A384A] mt-4 mb-16">
+        ABOUT ME
+      </h1>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <!-- Text Section (Left) -->
+        <div class="w-full md:w-1/2">
+          <p class="text-lg leading-relaxed">
+            I am a web developer with a passion for creating visually stunning
+            and highly functional applications. My expertise lies in building
+            modern, responsive websites and web apps using HTML, CSS,
+            JavaScript, and React. I am dedicated to staying on the cutting edge
+            of technology to deliver innovative solutions that captivate and
+            delight users. My goal is to transform complex ideas into elegant,
+            user-friendly experiences that make a lasting impact.
+          </p>
+        </div>
+
+        <!-- Image Section (Right) -->
+        <div class="w-full md:w-1/2">
+          <img
+            src="./assests/images/Ruth1.jpg"
+            alt="Ruth Nyankum"
+            class="w-full object-cover rounded-lg shadow-lg"
+            style="height: 500px; object-fit: cover"
+          />
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto mt-16">
+        <h1 class="text-4xl font-bold text-center text-[#0A384A] mb-16">
+          Education
+        </h1>
+
+        <div class="timeline-container">
+          <!-- Web Development -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="flex justify-between items-start mb-2">
+                <h2 class="text-2xl font-bold">Web Development</h2>
+                <span class="text-[#5cebdf] font-bold"
+                  >May 2024 - August 2024</span
+                >
+              </div>
+              <h3 class="text-xl mb-2">MEST Accra, Ghana</h3>
+              <p class="text-gray-400">Focused on Frontend Development</p>
+            </div>
+          </div>
+
+          <!-- BSc Disability and Rehabilitation Studies -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="flex justify-between items-start mb-2">
+                <h2 class="text-2xl font-bold">
+                  BSc. Disability and Rehabilitation Studies
+                </h2>
+                <span class="text-[#5cebdf] font-bold"
+                  >September 2016 - June 2020</span
+                >
+              </div>
+              <h3 class="text-xl mb-2">
+                Kwame Nkrumah University of Science and Technology, Kumasi,
+                Ghana
+              </h3>
+              <p class="text-gray-400">
+                Emphasized Disability studies with research work
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-[#0A384A] mb-16">
+          My Skills
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Frontend Development -->
+          <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <h3 class="text-xl font-bold mb-4">Frontend Development</h3>
+            <div class="space-y-4">
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span>HTML</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span>CSS</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span>JavaScript</span>
+                  <span>50%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Framework & Libraries -->
+          <div class="skill-card">
+            <div class="skill-icon">⚛️</div>
+            <h3 class="text-xl font-bold mb-4">Frameworks & Libraries</h3>
+            <div class="space-y-4">
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span>React</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span>Tailwind CSS</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Technologies -->
+          <div class="skill-card">
+            <div class="skill-icon">🛠️</div>
+            <h3 class="text-xl font-bold mb-4">Tools & Technologies</h3>
+            <div class="space-y-4">
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span>Git</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span>VS Code</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span>Figma</span>
+                  <span>75%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <div id="footer"></div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
