@@ -22,9 +22,17 @@
   transition: all 0.3s ease;
 }
 
-.mobile-nav-link:hover {
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
   background-color: #f3f4f6;
   color: #67e8f9;
+}
+
+/* Add active state styles for mobile menu */
+.mobile-nav-link.active {
+  background-color: #f3f4f6;
+  color: #67e8f9;
+  border-left: 4px solid #67e8f9;
 }
 
 /* ABOUT SECTION */
@@ -247,46 +255,53 @@
   }
 }
 
-/* PORTFOLIO */
-.portfolio-card {
-  background: #161b22;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.portfolio-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(92, 235, 223, 0.3);
-}
-
-.portfolio-image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-bottom: 2px solid #5cebdf;
-}
-
-.portfolio-info {
-  padding: 16px;
-}
-
-.portfolio-info h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
+/* FOOTER */
+.social-link {
   color: #5cebdf;
+  opacity: 7;
 }
 
-.portfolio-info a {
-  color: #84e1ff;
-  text-decoration: none;
-  display: block;
-  margin: 8px 0;
-  font-size: 0.9rem;
+.social-link:hover {
+  color: #4a90e2;
 }
 
-.portfolio-info p {
-  color: #b9bbbe;
-  font-size: 0.95rem;
+.copyright-symbol {
+  display: inline-block;
+  animation: fadeIn 1s ease-out;
+}
+
+.copyright-year {
+  display: inline-block;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

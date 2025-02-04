@@ -10,6 +10,8 @@ fetch('navbar.html')
 
     // Call function to initialize navbar interactions
     initNavbar();
+    // Set active state based on current page
+    setActiveNavLink();
   })
   .catch((error) => console.error('Error loading navbar:', error));
 
@@ -53,6 +55,31 @@ function initNavbar() {
     });
   }
 }
+
+function setActiveNavLink() {
+  // Get current page filename
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  // Select all nav links (both desktop and mobile)
+  const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+
+  // Remove active class from all links
+  allNavLinks.forEach((link) => {
+    link.classList.remove('active');
+  });
+
+  // Add active class to links that match current page
+  allNavLinks.forEach((link) => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+}
+
+// Call setActiveNavLink when page loads
+document.addEventListener('DOMContentLoaded', () => {
+  setActiveNavLink();
+});
 
 // Fetch and load the footer HTML into the div
 const footerContainer = document.getElementById('footer');
@@ -202,4 +229,88 @@ document.addEventListener('DOMContentLoaded', function () {
   // Update copyright year automatically
   const yearSpan = document.querySelector('.copyright-year');
   yearSpan.textContent = new Date().getFullYear();
+});
+
+// CONTACT
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contactForm');
+  const successMessage = document.getElementById('successMessage');
+
+  // Validation patterns
+  const patterns = {
+    name: /^[a-zA-Z\s]{2,30}$/,
+    email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+    subject: /^.{2,100}$/,
+    message: /^[\s\S]{10,500}$/,
+  };
+
+  // Error messages
+  const errorMessages = {
+    name: 'Please enter a valid name (2-30 characters)',
+    email: 'Please enter a valid email address',
+    subject: 'Subject must be between 2 and 100 characters',
+    message: 'Message must be between 10 and 500 characters',
+  };
+
+  // Real-time validation
+  form.querySelectorAll('input, textarea').forEach((field) => {
+    ['input', 'blur'].forEach((eventType) => {
+      field.addEventListener(eventType, () => validateField(field));
+    });
+  });
+
+  // Field validation function
+  function validateField(field) {
+    const errorDisplay = field.nextElementSibling;
+
+    if (!field.value.trim()) {
+      showError(field, errorDisplay, `${field.placeholder} is required`);
+      return false;
+    }
+
+    if (!patterns[field.id].test(field.value)) {
+      showError(field, errorDisplay, errorMessages[field.id]);
+      return false;
+    }
+
+    showSuccess(field, errorDisplay);
+    return true;
+  }
+
+  // Show error message
+  function showError(field, errorDisplay, message) {
+    field.classList.add('border-red-500');
+    errorDisplay.textContent = message;
+    errorDisplay.classList.remove('hidden');
+  }
+
+  // Show success
+  function showSuccess(field, errorDisplay) {
+    field.classList.remove('border-red-500');
+    errorDisplay.classList.add('hidden');
+  }
+
+  // Form submission
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let isValid = true;
+
+    // Validate all fields
+    form.querySelectorAll('input, textarea').forEach((field) => {
+      if (!validateField(field)) {
+        isValid = false;
+      }
+    });
+
+    if (isValid) {
+      // Here you would typically send the form data to a server
+      form.reset();
+      successMessage.classList.remove('hidden');
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        successMessage.classList.add('hidden');
+      }, 5000);
+    }
+  });
 });
