@@ -159,6 +159,30 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// INTEREST
+document.addEventListener('DOMContentLoaded', () => {
+  const interests = [
+    { name: 'Coding', icon: '💻' },
+    { name: 'Design', icon: '🎨' },
+    { name: 'Photography', icon: '📷' },
+  ];
+
+  const container = document.getElementById('interests-container');
+
+  interests.forEach((interest) => {
+    const card = document.createElement('div');
+    card.className =
+      'p-6 bg-white rounded-lg shadow-md flex flex-col items-center hover:shadow-lg transition duration-300';
+
+    card.innerHTML = `
+          <span class="text-5xl">${interest.icon}</span>
+          <p class="mt-3 text-lg font-medium">${interest.name}</p>
+      `;
+
+    container.appendChild(card);
+  });
+});
+
 // PORTFOLIO
 document.addEventListener('DOMContentLoaded', function () {
   const filterBtns = document.querySelectorAll('.filter-btn');

@@ -10,12 +10,17 @@
   <body class="bg-gray-100">
     <!-- NAVBAR -->
     <div id="navbar"></div>
+
     <main class="max-w-6xl mx-auto py-16 px-6">
       <!-- ABOUT SECTION  -->
       <h1 class="text-4xl font-bold text-center text-[#0A384A] mt-4 mb-16">
         ABOUT ME
       </h1>
-      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+
+      <!-- ABOUT ME -->
+      <section
+        class="flex flex-col md:flex-row items-center justify-between gap-8"
+      >
         <!-- Text Section (Left) -->
         <div class="w-full md:w-1/2">
           <p class="text-lg leading-relaxed">
@@ -38,9 +43,10 @@
             style="height: 500px; object-fit: cover"
           />
         </div>
-      </div>
+      </section>
 
-      <div class="max-w-4xl mx-auto mt-16">
+      <!-- EDUCATION -->
+      <section class="max-w-4xl mx-auto mt-16">
         <h1 class="text-4xl font-bold text-center text-[#0A384A] mb-16">
           Education
         </h1>
@@ -83,9 +89,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="max-w-6xl mx-auto">
+      <!-- SKILLS -->
+      <section class="max-w-6xl mx-auto">
         <h2 class="text-4xl font-bold text-center text-[#0A384A] mb-16">
           My Skills
         </h2>
@@ -192,7 +199,19 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- INTEREST -->
+      <section class="py-12">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl font-bold text-[#0A384A]">My Interests</h2>
+
+          <div
+            id="interests-container"
+            class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6"
+          ></div>
+        </div>
+      </section>
     </main>
     <!-- FOOTER -->
     <div id="footer"></div>
